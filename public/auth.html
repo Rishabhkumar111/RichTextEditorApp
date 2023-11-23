@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Editor App</title>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+    <script src="https://www.gstatic.com/firebasejs/10.4.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.4.0/firebase-firestore-compat.js"></script>
+    <link rel="stylesheet" href="./auth.css">
+</head>
+<body>
+    <div id="nav">
+        <div class="logo"><i class="ri-bubble-chart-fill"></i></div>
+        <div class="title">Rich Text Editor Note Web App</div>
+        <button id="navButton" class="signUpButton">Sign Up</button>
+    </div>
+    <div class="home">
+        <div class="box">
+            <h1>SignIn</h1>
+            <div class="input">
+                <div><i class="ri-mail-line"></i></div>
+                <textarea placeholder="Email" id="Email" autocomplete="email"></textarea>
+            </div>
+            <div class="input">
+                <div><i class="ri-lock-password-line"></i></div>
+                <textarea placeholder="Password" id="Password"></textarea>
+            </div>
+            <div class="extra">
+                <a class="forgotPassword" >Forgot Password</a>
+            </div>
+            <button id="authButton" class="login" >Login</button>
+            <!-- <div class="line">
+                <div class="leftLine"></div>
+                <p>Or</p>
+                <div class="rightLine"></div>
+            </div> -->
+            <!-- <div class="googleLogin">
+                <div><i class="ri-google-line"></i></div>
+                <p>Continue with Google</p>
+            </div> -->
+        </div>
+    </div>
+    <div class="loadScreen">
+        <i class="ri-bubble-chart-fill"></i>
+        <h5>Loading...</h5>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    
+    <script type="module" src="./auth.js"></script>
+</body>
+</html>

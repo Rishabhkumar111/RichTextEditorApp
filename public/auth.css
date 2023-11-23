@@ -1,0 +1,251 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+html,body{
+    height: 100%;
+    width: 100%;
+}
+#nav{
+    height: 10vh;
+    background-color: rgba(255, 170, 13, 1);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    justify-content: space-between;
+    padding: 0.2vw 2.2vw;
+    color: white;
+}
+#navButton{
+    height: 4.5vh;
+    width: 9vw;
+    font-size: 1.4vw;
+    border-radius: 2vw;
+    border: none;
+    border-color: white;
+    color: orange;
+}
+#nav .signInButton{
+    height: 4vh;
+    width: 10vw;
+    font-size: 1.4vw;
+    border-radius: 2vw;
+    border: none;
+    border-color: white;
+    color: orange;
+}
+.logo, .title{
+    font-size: 3vw;
+}
+.home{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+}
+.box{
+    height: 55vh;
+    width: 30vw;
+    border: 1px rgba(255, 166, 0, 0.7) solid;
+    border-radius: 1vw;
+    box-shadow: 0 4px 8px 0 rgba(221, 144, 0, 0.2), 0 6px 20px 0 rgba(221, 144, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: -1vw;
+    /* background-color: aquamarine; */
+}
+.input{
+    display: flex;
+    width: 100%;
+    /* background-color: brown; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5vw;
+    height: 7vh;
+    margin: 0.2vw 0vw;
+}
+.input textarea{
+    resize: none;
+    width: 22vw;
+    /* background-color: blue; */
+    justify-content: center;
+    height: 3vh;
+    border: none;
+    border-bottom: 2px solid rgba(255, 166, 0, 0.635);
+    padding-top:1vh;
+    padding-left: 0.5vw;
+    font-size: 1.1vw;
+    outline: none;
+}
+.input .ri-mail-line{
+    padding: 0vw 0.5vw;
+    font-size: 2.5vw;
+    color: orange;
+   
+}
+.input .ri-lock-password-line{
+    padding: 0vw 0.5vw;
+    font-size: 2.5vw;
+    color: orange;
+}
+.extra{
+    margin-left: 3.6vw;
+    display: flex;
+    width: 74%;
+    justify-content: end;
+}
+.extra .forgotPassword{
+    font-size: 1vw;
+    opacity: 60%;
+    color: #004cbd;
+    text-decoration: none;
+}
+.box h1{
+    letter-spacing: 2px;
+    color: orange;
+    margin-top: 6vh;
+    margin-bottom: 4vh;
+}
+.box button{
+    margin-top: 5vh;
+    border: none;
+    background-color: orange;
+    height: 5vh;
+    width: 10vw;
+    color: white;
+    font-size: 2.6vh;
+    letter-spacing: 0.05vw;
+    border-radius: 0.5vw;
+    box-shadow: 0 4px 8px 0 rgba(221, 144, 0, 0.2), 0 6px 20px 0 rgba(221, 144, 0, 0.2);
+}
+/* .line {
+    margin-top: 5vh;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    gap:0.4vw;
+}
+.leftLine, .rightLine {
+    content: "";
+    display: block;
+    height: 1.5px;
+    background-color: #e6e6e6;
+    width: 42%;
+    left: 0;
+}
+.googleLogin{
+    margin-top: 5vh;
+    background-color: orange;
+    height: 8vh;
+    width: 24vw;
+    border-radius: 2vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5vw;
+    font-size: 1.2vw;
+    color: white;
+    letter-spacing: 1px;
+    box-shadow: 0 4px 8px 0 rgba(221, 144, 0, 0.2), 0 6px 20px 0 rgba(221, 144, 0, 0.2);
+    
+}
+.googleLogin .ri-google-line{
+    font-size: 2.5vw;
+} */
+
+.loadScreen{
+    height: calc(100% + 10vh);
+    width: 100%;
+    background-color: rgba(255, 228, 177, 0.808);
+    z-index: 200;
+    top: 0px;
+    position: absolute;
+    display: none;
+}
+
+.loadScreen i{
+    font-size: 30vw;
+    color: orange;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Center the logo */
+    animation: spin 4s linear infinite; 
+}
+  
+@keyframes spin {
+    0% {
+        transform: translate(-50%, -50%) rotate(0deg) scale(1);
+    }
+    100% {
+        transform: translate(-50%, -50%) rotate(720deg) scale(0.2); /* Adjust rotation and scale for the spiral effect */
+    }
+}
+.loadScreen h5{
+    font-size: 2.5vw;
+    color: rgb(255, 255, 255);
+    position: absolute;
+    letter-spacing: 1px;
+    top: 78%;
+    left: 45%;
+}
+
+@media (max-width:600px) {
+    #nav .logo{
+        font-size: 10vw;
+        padding: 0vw;
+    }
+    #nav .title{
+        font-size: 6.5vw;
+        font-weight: 900;
+        /* letter-spacing: 1px; */
+    }
+    #navButton{
+        width: 18vw;
+        font-size: 4vw;
+    }
+    .home .box{
+        width: 75vw;
+    }
+    .input .ri-mail-line{
+        font-size: 6vw;
+    }
+    .input .ri-lock-password-line{
+        font-size: 6vw;
+    }
+    #Email{
+        font-size: 3vw;
+        width: 75%;
+        padding-left: 1vw;
+    }
+    #Password{
+        font-size: 3vw;
+        width: 75%;
+        padding-left: 1vw;
+    }
+    .extra .forgotPassword{
+        font-size: 3.1vw;
+    }
+    .box .login{
+        width: 20vw;
+    }
+    /* .box .googleLogin{
+        width: 85%;
+        font-size: 3.6vw;
+        border-radius: 10vw;
+    }
+    .box .googleLogin .ri-google-line{
+        font-size: 7vw;
+    } */
+    .loadScreen i{
+        font-size: 50vw;
+    }
+    .loadScreen h5{
+        font-size: 7vw;
+        left: 38%;
+    }
+}

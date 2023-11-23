@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Editor App</title>
+    <link href='https://cdn.jsdelivr.net/npm/froala-editor@4.0.10/css/froala_editor.pkgd.min.css' rel='stylesheet' type='text/css' />
+    <script type='text/javascript' src='https://cdn.jsdelivr.net/npm/froala-editor@4.0.10/js/froala_editor.pkgd.min.js'></script>
+
+    <script src="https://www.gstatic.com/firebasejs/10.4.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.4.0/firebase-firestore-compat.js"></script>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="./test.css">
+</head>
+<body>
+  <div id="nav">
+    <div class="logo"><i class="ri-bubble-chart-fill"></i></div>
+    <div class="title">Rich Text Editor Note Web App</div>
+    <div class="menu"><i class="ri-menu-3-line"></i></div>
+  </div>
+
+  <div id="home">
+    <div class="add">
+        <i class="ri-add-fill"></i>
+    </div>
+    <div class="dynamicTextArea">
+      
+    </div>
+  </div>
+
+  <div class="grid-container" id="gridContainer">
+      
+  </div>
+
+  <div id="pop-up-container" >
+            
+  </div>
+  <div id="updating-container" >
+            
+  </div>
+  <div class="slidingMenu">
+    <div class="backbutton"><i class="ri-arrow-right-fill"></i></div>
+    <div class="account">Account</div>
+    <div class="signOutButton">Sign Out</div>
+    <div class="filter">Filter</div>
+    <div class="filterBox">
+      
+      <label for="emailSelect" style="margin-top: 1vh;">Select User:</label>
+      <select id="emailSelect" class="scrollable-select">
+        <option >Click here to select Email</option>
+      </select>
+      
+      <label for="daysInput" style="margin-top: 6vh;">Filter by Days:</label>
+      <input type="number" id="daysInput" placeholder="Enter number of days" min="0" value="0">
+
+      <button id="filterButton">Apply Filter</button>
+      
+    </div>
+  </div>
+
+  <div class="loadScreen">
+    <i class="ri-bubble-chart-fill"></i>
+    <h5>Loading...</h5>
+  </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    
+    <script type='text/javascript' src='https://cdn.jsdelivr.net/npm/froala-editor@4.0.10/js/froala_editor.pkgd.min.js'></script>
+
+
+    <script type="module" src="./test.js"></script>
+    
+</body>
+</html>
