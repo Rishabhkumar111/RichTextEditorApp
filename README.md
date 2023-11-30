@@ -1,4 +1,4 @@
-# Rich Text Editor - Responsive Application
+# Rich Text Editor - Responsive Application [Live Freelance Projects Website](https://richtexteditor-abc44.web.app/auth.html)
 
 **Introduction**
 
