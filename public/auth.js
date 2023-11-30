@@ -139,14 +139,14 @@ function login(){
         alert('Please fill form properly');
         return
     }
-    // console.log("login me aaya hai");
+    // // console.log("login me aaya hai");
     signInWithEmailAndPassword(auth, email, password)
     .then((userCredential) => {
         // Signed in 
         userEmail = email;
         const user = userCredential.user;
         // console.log("&&&&&",email);
-        // document.querySelector(".loadScreen").style.display = "none";
+        document.querySelector(".loadScreen").style.display = "none";
         window.location.href = 'test.html';
         // ...
     })
@@ -160,7 +160,17 @@ function login(){
 function signout(){
     signOut(auth).then(() => {
     // console.log("signed out****a$$$$$$$**")
+function signout(){
+    signOut(auth).then(() => {
+    // console.log("signed out****a$$$$$$$**")
 
+    // window.location.href = 'auth.html';
+    // Sign-out successful.
+    }).catch((error) => {
+        // An error happened.
+    });
+}
+signout();
     // window.location.href = 'auth.html';
     // Sign-out successful.
     }).catch((error) => {
@@ -173,7 +183,9 @@ onAuthStateChanged(auth, (user) => {
       var uid = user.uid;
     //   window.location.href = 'test.html';
     //   console.log(uid,"%%%%%");
+    //   console.log(uid,"%%%%%");
     } else {
+    //   console.log("signed out%%%")
     //   console.log("signed out%%%")
     }
 });
