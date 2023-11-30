@@ -10,16 +10,16 @@ onAuthStateChanged(auth, (user) => {
     if (user) {
       var email = user.email;
       userEmail = email;
-      console.log(userEmail,"****@@@");
+      // console.log(userEmail,"****@@@");
       fun();
     } else {
-      console.log("signed out%%%");
+      // console.log("signed out%%%");
       window.location.href = 'auth.html';
     }
 });
 
 async function fun(){
-    console.log(userEmail);
+    // .log(userEmail);
 // Define a reference to the Firestore collection where user data is stored
 const usersCollectionRef = collection(db, "users");
 
@@ -35,17 +35,17 @@ getDocs(queryResult).
       // Data found for the user
       querySnapshot.forEach((doc) => {
         userData = doc.data();
-        console.log("User Data:", userData);
+        // console.log("User Data:", userData);
         populateUserData(userData);
         // You can now use userData to display or work with the user's information
       });
     } else {
       // No data found for the user
-      console.log("User data not found.");
+      // console.log("User data not found.");
     }
   })
   .catch((error) => {
-    console.error("Error fetching user data:", error);
+    // console.error("Error fetching user data:", error);
   });
 
 

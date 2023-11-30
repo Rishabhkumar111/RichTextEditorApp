@@ -25,7 +25,7 @@ function signup(){
         return
     }
     // console.log(email,"***",password);
-    console.log("signup me aa gya");
+    // console.log("signup me aa gya");
     createUserWithEmailAndPassword(auth, email, password)
     .then(async (userCredential) => {
         // Signed in 
@@ -139,13 +139,13 @@ function login(){
         alert('Please fill form properly');
         return
     }
-    console.log("login me aaya hai");
+    // console.log("login me aaya hai");
     signInWithEmailAndPassword(auth, email, password)
     .then((userCredential) => {
         // Signed in 
         userEmail = email;
         const user = userCredential.user;
-        console.log("&&&&&",email);
+        // console.log("&&&&&",email);
         // document.querySelector(".loadScreen").style.display = "none";
         window.location.href = 'test.html';
         // ...
@@ -157,15 +157,24 @@ function login(){
         document.querySelector(".loadScreen").style.display = "none";
     });
 }
+function signout(){
+    signOut(auth).then(() => {
+    // console.log("signed out****a$$$$$$$**")
 
-
+    // window.location.href = 'auth.html';
+    // Sign-out successful.
+    }).catch((error) => {
+        // An error happened.
+    });
+}
+signout();
 onAuthStateChanged(auth, (user) => {
     if (user) {
       var uid = user.uid;
     //   window.location.href = 'test.html';
-      console.log(uid,"%%%%%");
+    //   console.log(uid,"%%%%%");
     } else {
-      console.log("signed out%%%")
+    //   console.log("signed out%%%")
     }
 });
 

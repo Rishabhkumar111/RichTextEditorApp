@@ -11,12 +11,12 @@ const auth = getAuth(app);
 onAuthStateChanged(auth, (user) => {
     if (user) {
       var email = user.email;
-      console.log(email,"top");
+    //   console.log(email,"top");
       document.querySelector(".loadScreen").style.display = "block";
       funIsAdmin();
       creatingDropdownOption();
     } else {
-      console.log("signed out%%%");
+    //   console.log("signed out%%%");
       window.location.href = 'auth.html';
     }
 });
@@ -97,7 +97,7 @@ async function loadRtf(index) {
 async function questionVerified(index){
     const docRef = doc(db, "notes", index);
     const savedRtf = await getDoc(docRef);
-    console.log(savedRtf.data().email,"aaya hai verify me");
+    // console.log(savedRtf.data().email,"aaya hai verify me");
     if(savedRtf.data().isApproved){
         alert("it is already appoved");
     }else{
@@ -107,7 +107,7 @@ async function questionVerified(index){
         const userCollectionRef = collection(db, "users");
         const userQueryResult = query(userCollectionRef, where("email", "==", savedRtf.data().email));
         const querySnapshot = await getDocs(userQueryResult);
-        console.log("&^%$#",querySnapshot.docs[0].id);
+        // console.log("&^%$#",querySnapshot.docs[0].id);
         const userDocRef = doc(db, "users", querySnapshot.docs[0].id);
         const data = await getDoc(userDocRef);
         await updateDoc(userDocRef,{
@@ -119,7 +119,7 @@ async function questionVerified(index){
 async function update(index){
     closeFun();
     document.querySelector(".loadScreen").style.display = "block";
-    console.log("clicked allow");
+    // console.log("clicked allow");
     var html="";
     html+=`
         <div id="updating-container-box">
@@ -138,7 +138,7 @@ async function update(index){
     `;
     var htmlEle = document.getElementById("updating-container");
     htmlEle.innerHTML = html;
-    console.log(htmlEle);
+    // console.log(htmlEle);
     var updateCancle = document.getElementById("update-cancle");
     updateCancle.addEventListener("click", updateClose);
     const editor = new FroalaEditor('#update-froala-editor');
@@ -341,7 +341,7 @@ async function loadMore(){
 }
 window.addEventListener("scroll", handleScroll);
 function handleScroll() {
-    console.log("scroll2222");
+    // console.log("scroll2222");
     // Calculate the current scroll position
     const scrollTop = window.scrollY || document.documentElement.scrollTop;
     
@@ -467,7 +467,7 @@ document.addEventListener('DOMContentLoaded', function () {
             const currentDate = new Date();
             // Convert the date to a Firestore-compatible timestamp
             const createdAtTimestamp = firebase.firestore.Timestamp.fromDate(currentDate);
-    console.log(createdAtTimestamp);
+    // console.log(createdAtTimestamp);
             Addbutton.style.transform = "scale(1)"
             if(window.innerWidth<600){
                 gsap.to(".add",{
@@ -489,7 +489,7 @@ document.addEventListener('DOMContentLoaded', function () {
             })
             const rtfContent = editor.html.get();
             const subjectName = document.getElementById('subject-name').value;
-            console.log(userEmail);
+            // console.log(userEmail);
             var resultString = clearDefaultText(rtfContent);
             // alert(resultString);
             try {
@@ -579,7 +579,7 @@ account.addEventListener("click",function(){
 var signOutButton = document.querySelector(".signOutButton");
 signOutButton.addEventListener("click", function(){
     signOut(auth).then(() => {
-        console.log("signed out******")
+        // console.log("signed out******")
 
         window.location.href = 'auth.html';
         // Sign-out successful.
